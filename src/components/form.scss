@@ -1,0 +1,145 @@
+$blue: #0084f3;
+$grey: #a4a4a4;
+$dark-grey: #828282;
+$light-grey: #fafafa;
+$mint: #1eddc7;
+
+form {
+    max-width: 480px;
+    min-width: 270px;
+
+    .form-header {
+        background-color: $blue;
+        color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .percentage-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            margin: 20px;
+
+            .percentage {
+                font-size: .7em;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            p {
+                &:first-child {
+                    font-size: .7em;
+                    margin: 0;
+                }
+
+                &:last-child {
+                    font-size: 1em;
+                    margin: 0;
+                    // font-weight: bold;
+                }
+            }
+
+
+        }
+    }
+
+    .form-body {
+        background-color: $light-grey;
+        justify-content: flex-start;
+        padding: 1em 0;
+
+        .input-group {
+            display: flex;
+            flex-direction: row;
+
+            .input-number-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                width: 25px;
+                height: 25px;
+                margin: 20px;
+                border-radius: 50%;
+                filter: drop-shadow(0 2px 2px #c9c6c6);
+
+                p {
+                    color: $blue;
+                    font-size: .7em;
+                }
+            }
+
+            .input-right {
+                display: flex;
+                flex-direction: column;
+
+                &:nth-child(4) {
+                    flex-direction: row;
+                }
+
+                .input-title {
+                    color: $grey;
+                    font-size: .8em;
+                }
+
+                .input-title.last {
+                    font-size: 1em;
+                    margin-bottom: .5em;
+                }
+
+                label {
+                    font-family: Roboto;
+                    color: $dark-grey;
+                    font-size: .8em;
+                    padding: .4em 0;
+
+                    input {
+                        color: $dark-grey;
+                        position: relative;
+                        border: none;
+                        outline: none;
+                        background-color: inherit;
+                        font-size: 1em;
+                        padding: .5em 0;
+
+                        &#gText:focus,
+                        &#gEmail:focus {
+                            outline: none;
+                            font-size: 1.2em;
+                            color: $blue;
+                        }
+
+                        &#gRadio {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+
+                    .input-border-underline {
+                        border-bottom: 1px solid $blue;
+                    }
+                }
+            }
+        }
+
+        button {
+            width: 70px;
+            height: 25px;
+            margin-top: 2em;
+            margin-left: 5em;
+            background-color: $blue;
+            color: #ffffff;
+            border: none;
+        }
+    }
+}
